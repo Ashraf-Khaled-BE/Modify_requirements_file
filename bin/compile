@@ -7,7 +7,7 @@
 echo "-----> Install heroku-buildpack-modify-req"
 BUILD_DIR=$1
 ENV_DIR=$3
-GITHUB_AUTH_TOKEN=$(<"$ENV_DIR/GITHUB_AUTH_TOKEN")
+GITHUB_AUTH_TOKEN=$ENV_DIR/CUSTOM_SSH_KEY
 echo $GITHUB_AUTH_TOKEN
 
 cd "$BUILD_DIR"
