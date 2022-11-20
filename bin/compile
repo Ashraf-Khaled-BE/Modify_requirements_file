@@ -10,8 +10,6 @@ ENV_DIR=$3
 
 GITHUB_AUTH_TOKEN="$(cat "$ENV_DIR/GITHUB_AUTH_TOKEN")"
 
-echo $GITHUB_AUTH_TOKEN
-
 if [[ -z $GITHUB_AUTH_TOKEN ]]; then
     echo "Did you forget to set GITHUB_AUTH_TOKEN?"
     exit 1
