@@ -1,9 +1,0 @@
-#!/bin/sh
-# -----------------------------------------------------------------------------
-# A heroku buildpack for Modifying Requirements.txt file in python app
-# Copyright (c) 2022 - Ashraf Khaled
-# -----------------------------------------------------------------------------
-
-echo "Modify requirements.txt"
-sed -i "s/{GITHUB_AUTH_TOKEN}/$GITHUB_AUTH_TOKEN/gI" requirements.txt
-echo "-----> Done!"
