@@ -3,17 +3,11 @@
 # A heroku buildpack for Modifying Requirements.txt file in python app
 # Copyright (c) 2022 - Ashraf Khaled
 # -----------------------------------------------------------------------------
-
 echo "-----> Install heroku-buildpack-modify-req"
 BUILD_DIR=$1
 ENV_DIR=$3
 
 GITHUB_AUTH_TOKEN="$(cat "$ENV_DIR/GITHUB_AUTH_TOKEN")"
-
-if [[ -z $GITHUB_AUTH_TOKEN ]]; then
-    echo "Did you forget to set GITHUB_AUTH_TOKEN?"
-    exit 1
-fi
 
 cd "$BUILD_DIR"
 echo "Modify requirements.txt"
