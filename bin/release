@@ -1,0 +1,5 @@
+#!/bin/sh
+# -----------------------------------------------------------------------------
+# A heroku buildpack for Modifying Requirements.txt file in python app
+# Copyright (c) 2022 - Ashraf Khaled
+# -----------------------------------------------------------------------------
