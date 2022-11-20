@@ -10,6 +10,6 @@ ENV_DIR=$3
 GITHUB_AUTH_TOKEN="$(cat "$ENV_DIR/GITHUB_AUTH_TOKEN")"
 
 cd "$BUILD_DIR"
-echo "Modify requirements.txt"
+echo "----->Modify requirements.txt"
 sed -i "s/{GITHUB_AUTH_TOKEN}/$GITHUB_AUTH_TOKEN/g" requirements.txt
 echo "-----> Done!"
