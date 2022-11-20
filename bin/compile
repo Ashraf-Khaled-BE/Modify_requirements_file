@@ -8,18 +8,16 @@ echo "-----> Install heroku-buildpack-modify-req"
 BUILD_DIR=$1
 ENV_DIR=$3
 
-ls ENV_DIR
 GITHUB_AUTH_TOKEN="$(cat "$ENV_DIR/GITHUB_AUTH_TOKEN")"
 
 echo $GITHUB_AUTH_TOKEN
-
-cd "$BUILD_DIR"
 
 if [[ -z $GITHUB_AUTH_TOKEN ]]; then
     echo "Did you forget to set GITHUB_AUTH_TOKEN?"
     exit 1
 fi
 
+cd "$BUILD_DIR"
 echo "Modify requirements.txt"
 sed -i "s/{GITHUB_AUTH_TOKEN}/$GITHUB_AUTH_TOKEN/g" requirements.txt
 cat requirements.txt
