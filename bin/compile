@@ -24,3 +24,4 @@ fi
 
 echo "Modify requirements.txt"
 sed -i "s/{GITHUB_AUTH_TOKEN}/$GITHUB_AUTH_TOKEN/gI" requirements.txt
+echo "-----> Done!"
